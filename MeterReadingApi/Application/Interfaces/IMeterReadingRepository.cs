@@ -1,4 +1,6 @@
-﻿namespace MeterReadingApi.Domain
+﻿using MeterReadingApi.Domain;
+
+namespace MeterReadingApi.Application.Interfaces
 {
     public interface IMeterReadingRepository
     {

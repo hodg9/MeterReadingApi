@@ -1,4 +1,5 @@
-﻿using MeterReadingApi.Domain;
+﻿using MeterReadingApi.Application.Interfaces;
+using MeterReadingApi.Domain;
 
 namespace MeterReadingApi.Infrastructure
 {

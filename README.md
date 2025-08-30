@@ -36,7 +36,8 @@ Swagger documentation is available at `/swagger` when the application is running
    - React using Vite and SWC
    - Material UI for a clean UX
    - React Query for API calls
-
+ - The project is split in to folder that could be separate projects in a larger solution (API, Application, Domain, Infrastructure)
+ - I aimed for around half a day as suggested, though it went a little over, but wanted to add a little more structure.
 ### Testing
 - Unit tests cover validation logic (value format, account existence, duplicates, future dates)
 - Endpoints check for missing, empty, and invalid files

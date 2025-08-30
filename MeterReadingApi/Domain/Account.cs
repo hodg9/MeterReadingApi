@@ -15,6 +15,8 @@ namespace MeterReadingApi.Domain
         }
         public Account(string firstName, string lastName)
         {
+            ArgumentException.ThrowIfNullOrWhiteSpace(firstName);
+            ArgumentException.ThrowIfNullOrWhiteSpace(lastName);
             FirstName = firstName;
             LastName = lastName;
         }

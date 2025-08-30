@@ -14,10 +14,12 @@ namespace MeterReadingApi.Infrastructure
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<MeterReading>()
                 .HasOne<Account>()
                 .WithMany()
                 .HasForeignKey(mr => mr.AccountId);
+
             modelBuilder.Entity<MeterReading>()
                 .HasIndex(mr => new { mr.AccountId, mr.MeterReadingDateTime })
                 .IsUnique();

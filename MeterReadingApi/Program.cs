@@ -1,6 +1,6 @@
-using MeterReadingApi.Domain;
+using MeterReadingApi.Application.Interfaces;
+using MeterReadingApi.Application.Services;
 using MeterReadingApi.Infrastructure;
-using MeterReadingApi.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

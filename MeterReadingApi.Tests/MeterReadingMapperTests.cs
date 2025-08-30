@@ -1,5 +1,7 @@
-﻿using MeterReadingApi.Domain;
-using MeterReadingApi.Services;
+﻿using MeterReadingApi.Application.Dtos;
+using MeterReadingApi.Application.Interfaces;
+using MeterReadingApi.Application.Services;
+using MeterReadingApi.Domain;
 using Moq;
 
 namespace MeterReadingApi.Tests

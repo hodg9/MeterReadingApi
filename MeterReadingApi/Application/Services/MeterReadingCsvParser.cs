@@ -1,9 +1,9 @@
 ﻿using CsvHelper;
 using CsvHelper.Configuration;
-using MeterReadingApi.Domain;
+using MeterReadingApi.Application.Dtos;
 using System.Globalization;
 
-namespace MeterReadingApi.Services
+namespace MeterReadingApi.Application.Services
 {
     public class MeterReadingCsvParser
     {
@@ -26,8 +26,4 @@ namespace MeterReadingApi.Services
             return new MeterReadingCsvParserResult(records, badRows);
         }
     }
-
-    public record MeterReadingCsvParserResult(IReadOnlyList<MeterReadingCsvRecord> Records, IReadOnlyList<string> BadRows);
-
-    public record MeterReadingCsvRecord(int AccountId, DateTime MeterReadingDateTime, int MeterReadValue);
 }

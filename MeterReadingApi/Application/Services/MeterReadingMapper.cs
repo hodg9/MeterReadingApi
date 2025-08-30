@@ -1,6 +1,8 @@
-﻿using MeterReadingApi.Domain;
+﻿using MeterReadingApi.Application.Dtos;
+using MeterReadingApi.Application.Interfaces;
+using MeterReadingApi.Domain;
 
-namespace MeterReadingApi.Services
+namespace MeterReadingApi.Application.Services
 {
     public class MeterReadingMapper
     {
@@ -60,6 +62,4 @@ namespace MeterReadingApi.Services
         }
 
     }
-
-    public record MeterReadingMappingResult(IReadOnlyList<MeterReading> ValidRecords, IReadOnlyList<MeterReadingCsvRecord> InvalidRecords);
 }

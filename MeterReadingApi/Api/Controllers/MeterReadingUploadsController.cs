@@ -1,10 +1,11 @@
-﻿using MeterReadingApi.Domain;
-using MeterReadingApi.Dtos;
+﻿using MeterReadingApi.Api.Dtos;
+using MeterReadingApi.Application.Dtos;
+using MeterReadingApi.Application.Interfaces;
+using MeterReadingApi.Application.Services;
 using MeterReadingApi.Infrastructure;
-using MeterReadingApi.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MeterReadingApi.Controllers
+namespace MeterReadingApi.Api.Controllers
 {
     [ApiController]
     [Route("/meter-reading-uploads")]
@@ -70,12 +71,7 @@ namespace MeterReadingApi.Controllers
                 return BadRequest($"Failed to save meter readings.");
             }
 
-            return Ok(new MeterReadingUploadResult
-            {
-                TotalRecords = parsedResults.Records.Count + parsedResults.BadRows.Count,
-                SuccessfulRecords = mappingResults.ValidRecords.Count,
-                FailedRecords = mappingResults.InvalidRecords.Count + parsedResults.BadRows.Count
-            });
+            return Ok(new MeterReadingUploadResult(parsedResults.Records.Count + parsedResults.BadRows.Count, mappingResults.ValidRecords.Count, mappingResults.InvalidRecords.Count + parsedResults.BadRows.Count));
         }
 
     }
